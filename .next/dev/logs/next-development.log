@@ -1,10 +1,4 @@
-[00:00:01.834] Server  LOG      ✓ Ready in 1296ms
-[00:00:04.586] Server  LOG     Full response: {}
-[00:00:04.598] Server  LOG     Results: [{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...}]
-[00:00:04.752] Server  LOG     Full response: {}
-[00:00:04.754] Server  LOG     Results: [{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...}]
-[00:00:12.024] Browser WARN    Image with src "https://image.tmdb.org/t/p/original//ckPbbcJOcL43mJBrROTMrtOBIYK.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:00:22.422] Server  LOG     Full response: {}
-[00:00:22.424] Server  LOG     Results: [{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...}]
-[00:07:02.052] Browser WARN    Image with src "https://image.tmdb.org/t/p/original//f5ujWTxY48f90J3XZoArKo6W3BW.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:01.097] Server  LOG      ✓ Ready in 846ms
+[00:00:05.130] Server  LOG     Full response: {}
+[00:00:05.144] Server  LOG     Results: [{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...}]
+[00:00:19.599] Server  ERROR    ⨯ "upstream image response failed for" "https://image.tmdb.org/t/p/original/null" 404
