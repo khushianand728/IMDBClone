@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/apple/Desktop/imdb/app/loading.jsx"],"sourcesContent":["\nexport default function loading() {\n  return (\n    <div className=\"flex justify-center mt-16\">\n        <img className=\"h-52\" src=\"Spinner.svg\" alt=\"loading..\" />\n    </div>\n  )\n}\n"],"names":[],"mappings":";;;;;;AACe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAU;kBACX,cAAA,8OAAC;YAAI,WAAU;YAAO,KAAI;YAAc,KAAI;;;;;;;;;;;AAGpD"}}]
+}

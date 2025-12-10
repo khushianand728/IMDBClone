@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/apple/Desktop/imdb/app/error.jsx"],"sourcesContent":["\"use client\"\nimport { useEffect} from \"react\"\nexport default function error({error,reset}) {\n    useEffect(()=>{\n        console.log(error);\n    },[error])\n  return (\n    <div className=\"text-center mt-10\">\n   <h1>Something went wrong, Please Try Again</h1>\n   <button className=\"hover:bg-amber-600\" onClick={()=>reset()}>Try Again</button>\n    </div>\n  )\n}\n"],"names":[],"mappings":";;;;;AACA;AADA;;;AAEe,SAAS,MAAM,EAAC,KAAK,EAAC,KAAK,EAAC;IACvC,IAAA,kNAAS,EAAC;QACN,QAAQ,GAAG,CAAC;IAChB,GAAE;QAAC;KAAM;IACX,qBACE,8OAAC;QAAI,WAAU;;0BAChB,8OAAC;0BAAG;;;;;;0BACJ,8OAAC;gBAAO,WAAU;gBAAqB,SAAS,IAAI;0BAAS;;;;;;;;;;;;AAGhE"}}]
+}
