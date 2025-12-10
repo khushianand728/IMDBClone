@@ -1,15 +1,27 @@
-"use client"
-import Link from 'next/link'
-import { useSearchParams } from 'next/navigation'
-export default function Navbaritem({title,param}) {
-  const searchParams= useSearchParams()
-  const genre=searchParams.get('genre')
+"use client";
+
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+
+interface NavbarItemProps {
+  title: string;
+  param: string;
+}
+
+export default function Navbaritem({ title, param }: NavbarItemProps) {
+  const searchParams = useSearchParams();
+  const genre = searchParams.get("genre");
+
   return (
-    <div>
-      <Link
-       className={`hover:text-amber-600 font-semibold ${genre === param ? 'underline':''}`}
-      
-      href={`/?genre=${param}`}>{title}</Link>
-    </div>
-  )
+    <Link
+      className={`m-4 hover:text-amber-600 font-semibold ${
+        genre === param
+          ? "underline underline-offset-8 decoration-4 decoration-amber-500 rounded-lg"
+          : ""
+      }`}
+      href={`/?genre=${param}`}
+    >
+      {title}
+    </Link>
+  );
 }

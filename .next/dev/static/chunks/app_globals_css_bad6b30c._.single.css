@@ -32,7 +32,6 @@
 
 @layer theme {
   :root, :host {
-    --color-amber-300: #ffd236;
     --color-amber-500: #f99c00;
     --color-amber-600: #dd7400;
     --color-slate-400: #90a1b9;
@@ -62,7 +61,6 @@
 
   @supports (color: lab(0% 0 0)) {
     :root, :host {
-      --color-amber-300: lab(86.4156% 6.13147 78.3961);
       --color-amber-500: lab(72.7183% 31.8672 97.9407);
       --color-amber-600: lab(60.3514% 40.5624 87.1228);
       --color-slate-400: lab(65.5349% -2.25151 -14.5072);
@@ -321,6 +319,10 @@
 @layer components;
 
 @layer utilities {
+  .m-4 {
+    margin: calc(var(--spacing) * 4);
+  }
+
   .mx-auto {
     margin-inline: auto;
   }
@@ -448,10 +450,6 @@
     gap: calc(var(--spacing) * 4);
   }
 
-  .gap-5 {
-    gap: calc(var(--spacing) * 5);
-  }
-
   :where(.space-y-4 > :not(:last-child)) {
     --tw-space-y-reverse: 0;
     margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
@@ -479,10 +477,6 @@
   .border-2 {
     border-style: var(--tw-border-style);
     border-width: 2px;
-  }
-
-  .bg-amber-300 {
-    background-color: var(--color-amber-300);
   }
 
   .bg-amber-500 {
@@ -531,10 +525,6 @@
 
   .pt-6 {
     padding-top: calc(var(--spacing) * 6);
-  }
-
-  .pl-40 {
-    padding-left: calc(var(--spacing) * 40);
   }
 
   .text-center {
@@ -589,6 +579,19 @@
 
   .underline {
     text-decoration-line: underline;
+  }
+
+  .decoration-amber-500 {
+    -webkit-text-decoration-color: var(--color-amber-500);
+    text-decoration-color: var(--color-amber-500);
+  }
+
+  .decoration-4 {
+    text-decoration-thickness: 4px;
+  }
+
+  .underline-offset-8 {
+    text-underline-offset: 8px;
   }
 
   .antialiased {

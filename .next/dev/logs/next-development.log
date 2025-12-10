@@ -1,4 +1,588 @@
-[00:00:01.097] Server  LOG      ✓ Ready in 846ms
-[00:00:05.130] Server  LOG     Full response: {}
-[00:00:05.144] Server  LOG     Results: [{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...}]
-[00:00:19.599] Server  ERROR    ⨯ "upstream image response failed for" "https://image.tmdb.org/t/p/original/null" 404
+[00:00:00.941] Server  LOG     
+[00:00:00.941] Server  LOG        We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+[00:00:00.942] Server  LOG        The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+[00:00:00.942] Server  LOG        	- incremental was set to true
+[00:00:00.942] Server  LOG        	- include was updated to add '.next/types/**/*.ts'
+[00:00:00.942] Server  LOG        	- include was updated to add '.next/dev/types/**/*.ts'
+[00:00:00.942] Server  LOG        	- plugins was updated to add { name: 'next' }
+[00:00:00.942] Server  LOG     
+[00:00:00.942] Server  LOG        The following mandatory changes were made to your tsconfig.json:
+
+[00:00:00.942] Server  LOG        	- esModuleInterop was set to true (requirement for SWC / babel)
+[00:00:00.943] Server  LOG        	- jsx was set to react-jsx (next.js uses the React automatic runtime)
+[00:00:00.943] Server  LOG     
+[00:00:01.096] Server  LOG      ✓ Ready in 845ms
+[00:00:11.438] Server  ERROR    ⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/app/Providers'
+  4 | import "./globals.css";
+  5 | import Header from "@/components/Header";
+> 6 | import Providers from "@/app/Providers";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Navbar from "@/components/Navbar";
+  8 | import Searchbox from '@/components/Searchbox'
+  9 |
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Header'
+  3 | import { Geist, Geist_Mono } from "next/font/google";
+  4 | import "./globals.css";
+> 5 | import Header from "@/components/Header";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import Providers from "@/app/Providers";
+  7 | import Navbar from "@/components/Navbar";
+  8 | import Searchbox from '@/components/Searchbox'
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/layout.tsx:7:1
+Module not found: Can't resolve '@/components/Navbar'
+   5 | import Header from "@/components/Header";
+   6 | import Providers from "@/app/Providers";
+>  7 | import Navbar from "@/components/Navbar";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import Searchbox from '@/components/Searchbox'
+   9 |
+  10 | const geistSans = Geist({
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/page.tsx:1:1
+Module not found: Can't resolve '@/components/Result'
+> 1 | import Result from '@/components/Result' 
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+  3 | export const revalidate = 60;
+  4 |
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/layout.tsx:8:1
+Module not found: Can't resolve '@/components/Searchbox'
+   6 | import Providers from "@/app/Providers";
+   7 | import Navbar from "@/components/Navbar";
+>  8 | import Searchbox from '@/components/Searchbox'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | const geistSans = Geist({
+  11 |   variable: "--font-geist-sans",
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:12.593] Browser ERROR   uncaughtError: Error: ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/app/Providers'
+  4 | import "./globals.css";
+  5 | import Header from "@/components/Header";
+> 6 | import Providers from "@/app/Providers";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Navbar from "@/components/Navbar";
+  8 | import Searchbox from '@/components/Searchbox'
+  9 |
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:12.804] Browser ERROR   ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/app/Providers'
+  4 | import "./globals.css";
+  5 | import Header from "@/components/Header";
+> 6 | import Providers from "@/app/Providers";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Navbar from "@/components/Navbar";
+  8 | import Searchbox from '@/components/Searchbox'
+  9 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.804] Browser ERROR   ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Header'
+  3 | import { Geist, Geist_Mono } from "next/font/google";
+  4 | import "./globals.css";
+> 5 | import Header from "@/components/Header";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import Providers from "@/app/Providers";
+  7 | import Navbar from "@/components/Navbar";
+  8 | import Searchbox from '@/components/Searchbox'
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.804] Browser ERROR   ./app/layout.tsx:7:1
+Module not found: Can't resolve '@/components/Navbar'
+   5 | import Header from "@/components/Header";
+   6 | import Providers from "@/app/Providers";
+>  7 | import Navbar from "@/components/Navbar";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import Searchbox from '@/components/Searchbox'
+   9 |
+  10 | const geistSans = Geist({
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.804] Browser ERROR   ./app/page.tsx:1:1
+Module not found: Can't resolve '@/components/Result'
+> 1 | import Result from '@/components/Result' 
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+  3 | export const revalidate = 60;
+  4 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.804] Browser ERROR   ./app/layout.tsx:8:1
+Module not found: Can't resolve '@/components/Searchbox'
+   6 | import Providers from "@/app/Providers";
+   7 | import Navbar from "@/components/Navbar";
+>  8 | import Searchbox from '@/components/Searchbox'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | const geistSans = Geist({
+  11 |   variable: "--font-geist-sans",
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.804] Browser ERROR   ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/app/Providers'
+  4 | import "./globals.css";
+  5 | import Header from "@/components/Header";
+> 6 | import Providers from "@/app/Providers";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Navbar from "@/components/Navbar";
+  8 | import Searchbox from '@/components/Searchbox'
+  9 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.804] Browser ERROR   ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Header'
+  3 | import { Geist, Geist_Mono } from "next/font/google";
+  4 | import "./globals.css";
+> 5 | import Header from "@/components/Header";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import Providers from "@/app/Providers";
+  7 | import Navbar from "@/components/Navbar";
+  8 | import Searchbox from '@/components/Searchbox'
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.804] Browser ERROR   ./app/layout.tsx:7:1
+Module not found: Can't resolve '@/components/Navbar'
+   5 | import Header from "@/components/Header";
+   6 | import Providers from "@/app/Providers";
+>  7 | import Navbar from "@/components/Navbar";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import Searchbox from '@/components/Searchbox'
+   9 |
+  10 | const geistSans = Geist({
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.804] Browser ERROR   ./app/page.tsx:1:1
+Module not found: Can't resolve '@/components/Result'
+> 1 | import Result from '@/components/Result' 
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+  3 | export const revalidate = 60;
+  4 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.804] Browser ERROR   ./app/layout.tsx:8:1
+Module not found: Can't resolve '@/components/Searchbox'
+   6 | import Providers from "@/app/Providers";
+   7 | import Navbar from "@/components/Navbar";
+>  8 | import Searchbox from '@/components/Searchbox'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | const geistSans = Geist({
+  11 |   variable: "--font-geist-sans",
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:13.109] Browser ERROR   ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/app/Providers'
+  4 | import "./globals.css";
+  5 | import Header from "@/components/Header";
+> 6 | import Providers from "@/app/Providers";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Navbar from "@/components/Navbar";
+  8 | import Searchbox from '@/components/Searchbox'
+  9 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:13.109] Browser ERROR   ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Header'
+  3 | import { Geist, Geist_Mono } from "next/font/google";
+  4 | import "./globals.css";
+> 5 | import Header from "@/components/Header";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import Providers from "@/app/Providers";
+  7 | import Navbar from "@/components/Navbar";
+  8 | import Searchbox from '@/components/Searchbox'
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:13.109] Browser ERROR   ./app/layout.tsx:7:1
+Module not found: Can't resolve '@/components/Navbar'
+   5 | import Header from "@/components/Header";
+   6 | import Providers from "@/app/Providers";
+>  7 | import Navbar from "@/components/Navbar";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import Searchbox from '@/components/Searchbox'
+   9 |
+  10 | const geistSans = Geist({
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:13.109] Browser ERROR   ./app/page.tsx:1:1
+Module not found: Can't resolve '@/components/Result'
+> 1 | import Result from '@/components/Result' 
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+  3 | export const revalidate = 60;
+  4 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:13.109] Browser ERROR   ./app/layout.tsx:8:1
+Module not found: Can't resolve '@/components/Searchbox'
+   6 | import Providers from "@/app/Providers";
+   7 | import Navbar from "@/components/Navbar";
+>  8 | import Searchbox from '@/components/Searchbox'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | const geistSans = Geist({
+  11 |   variable: "--font-geist-sans",
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:14.956] Browser ERROR   ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/app/Providers'
+  4 | import "./globals.css";
+  5 | import Header from "@/components/Header";
+> 6 | import Providers from "@/app/Providers";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Navbar from "@/components/Navbar";
+  8 | import Searchbox from '@/components/Searchbox'
+  9 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:14.956] Browser ERROR   ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Header'
+  3 | import { Geist, Geist_Mono } from "next/font/google";
+  4 | import "./globals.css";
+> 5 | import Header from "@/components/Header";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import Providers from "@/app/Providers";
+  7 | import Navbar from "@/components/Navbar";
+  8 | import Searchbox from '@/components/Searchbox'
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:14.956] Browser ERROR   ./app/layout.tsx:7:1
+Module not found: Can't resolve '@/components/Navbar'
+   5 | import Header from "@/components/Header";
+   6 | import Providers from "@/app/Providers";
+>  7 | import Navbar from "@/components/Navbar";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import Searchbox from '@/components/Searchbox'
+   9 |
+  10 | const geistSans = Geist({
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:14.956] Browser ERROR   ./app/page.tsx:1:1
+Module not found: Can't resolve '@/components/Result'
+> 1 | import Result from '@/components/Result' 
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+  3 | export const revalidate = 60;
+  4 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:14.956] Browser ERROR   ./app/layout.tsx:8:1
+Module not found: Can't resolve '@/components/Searchbox'
+   6 | import Providers from "@/app/Providers";
+   7 | import Navbar from "@/components/Navbar";
+>  8 | import Searchbox from '@/components/Searchbox'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | const geistSans = Geist({
+  11 |   variable: "--font-geist-sans",
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:14.956] Browser ERROR   ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/app/Providers'
+  4 | import "./globals.css";
+  5 | import Header from "@/components/Header";
+> 6 | import Providers from "@/app/Providers";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Navbar from "@/components/Navbar";
+  8 | import Searchbox from '@/components/Searchbox'
+  9 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:14.956] Browser ERROR   ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Header'
+  3 | import { Geist, Geist_Mono } from "next/font/google";
+  4 | import "./globals.css";
+> 5 | import Header from "@/components/Header";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import Providers from "@/app/Providers";
+  7 | import Navbar from "@/components/Navbar";
+  8 | import Searchbox from '@/components/Searchbox'
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:14.956] Browser ERROR   ./app/layout.tsx:7:1
+Module not found: Can't resolve '@/components/Navbar'
+   5 | import Header from "@/components/Header";
+   6 | import Providers from "@/app/Providers";
+>  7 | import Navbar from "@/components/Navbar";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import Searchbox from '@/components/Searchbox'
+   9 |
+  10 | const geistSans = Geist({
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:14.956] Browser ERROR   ./app/page.tsx:1:1
+Module not found: Can't resolve '@/components/Result'
+> 1 | import Result from '@/components/Result' 
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+  3 | export const revalidate = 60;
+  4 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:14.956] Browser ERROR   ./app/layout.tsx:8:1
+Module not found: Can't resolve '@/components/Searchbox'
+   6 | import Providers from "@/app/Providers";
+   7 | import Navbar from "@/components/Navbar";
+>  8 | import Searchbox from '@/components/Searchbox'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | const geistSans = Geist({
+  11 |   variable: "--font-geist-sans",
+
+https://nextjs.org/docs/messages/module-not-found
+[01:09:12.135] Server  ERROR    ⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/app/Providers'
+  4 | import "./globals.css";
+  5 | import Header from "@/components/Header";
+> 6 | import Providers from "@/app/Providers";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Navbar from "@/components/Navbar";
+  8 | import Searchbox from '@/components/Searchbox'
+  9 |
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:09:12.136] Server  ERROR    ⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/app/Providers'
+  4 | import "./globals.css";
+  5 | import Header from "@/components/Header";
+> 6 | import Providers from "@/app/Providers";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Navbar from "@/components/Navbar";
+  8 | import Searchbox from '@/components/Searchbox'
+  9 |
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:09:12.137] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Header'
+  3 | import { Geist, Geist_Mono } from "next/font/google";
+  4 | import "./globals.css";
+> 5 | import Header from "@/components/Header";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import Providers from "@/app/Providers";
+  7 | import Navbar from "@/components/Navbar";
+  8 | import Searchbox from '@/components/Searchbox'
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:09:12.138] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Header'
+  3 | import { Geist, Geist_Mono } from "next/font/google";
+  4 | import "./globals.css";
+> 5 | import Header from "@/components/Header";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import Providers from "@/app/Providers";
+  7 | import Navbar from "@/components/Navbar";
+  8 | import Searchbox from '@/components/Searchbox'
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:09:12.138] Server  ERROR    ⨯ ./app/layout.tsx:7:1
+Module not found: Can't resolve '@/components/Navbar'
+   5 | import Header from "@/components/Header";
+   6 | import Providers from "@/app/Providers";
+>  7 | import Navbar from "@/components/Navbar";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import Searchbox from '@/components/Searchbox'
+   9 |
+  10 | const geistSans = Geist({
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:09:12.139] Server  ERROR    ⨯ ./app/layout.tsx:7:1
+Module not found: Can't resolve '@/components/Navbar'
+   5 | import Header from "@/components/Header";
+   6 | import Providers from "@/app/Providers";
+>  7 | import Navbar from "@/components/Navbar";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import Searchbox from '@/components/Searchbox'
+   9 |
+  10 | const geistSans = Geist({
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:09:12.140] Server  ERROR    ⨯ ./app/page.tsx:1:1
+Module not found: Can't resolve '@/components/Result'
+> 1 | import Result from '@/components/Result' 
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+  3 | export const revalidate = 60;
+  4 |
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:09:12.141] Server  ERROR    ⨯ ./app/page.tsx:1:1
+Module not found: Can't resolve '@/components/Result'
+> 1 | import Result from '@/components/Result' 
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+  3 | export const revalidate = 60;
+  4 |
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:09:12.142] Server  ERROR    ⨯ ./app/layout.tsx:8:1
+Module not found: Can't resolve '@/components/Searchbox'
+   6 | import Providers from "@/app/Providers";
+   7 | import Navbar from "@/components/Navbar";
+>  8 | import Searchbox from '@/components/Searchbox'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | const geistSans = Geist({
+  11 |   variable: "--font-geist-sans",
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:09:12.143] Server  ERROR    ⨯ ./app/layout.tsx:8:1
+Module not found: Can't resolve '@/components/Searchbox'
+   6 | import Providers from "@/app/Providers";
+   7 | import Navbar from "@/components/Navbar";
+>  8 | import Searchbox from '@/components/Searchbox'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | const geistSans = Geist({
+  11 |   variable: "--font-geist-sans",
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:09:12.803] Browser ERROR   ./tsconfig.json:18:5
+An issue occurred while parsing a tsconfig.json file.
+  16 |     "esModuleInterop": true,
+  17 |
+> 18 |     ✅ ADD THESE 👇
+     |     ^^^
+  19 |     "baseUrl": ".",
+  20 |     "paths": {
+  21 |       "@/*": ["./*"]
+
+tsconfig is not parseable: invalid JSON: Unexpected token
+[01:09:12.803] Browser ERROR   ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/app/Providers'
+  4 | import "./globals.css";
+  5 | import Header from "@/components/Header";
+> 6 | import Providers from "@/app/Providers";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Navbar from "@/components/Navbar";
+  8 | import Searchbox from '@/components/Searchbox'
+  9 |
+
+https://nextjs.org/docs/messages/module-not-found
+[01:09:12.803] Browser ERROR   ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Header'
+  3 | import { Geist, Geist_Mono } from "next/font/google";
+  4 | import "./globals.css";
+> 5 | import Header from "@/components/Header";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import Providers from "@/app/Providers";
+  7 | import Navbar from "@/components/Navbar";
+  8 | import Searchbox from '@/components/Searchbox'
+
+https://nextjs.org/docs/messages/module-not-found
+[01:09:12.803] Browser ERROR   ./app/layout.tsx:7:1
+Module not found: Can't resolve '@/components/Navbar'
+   5 | import Header from "@/components/Header";
+   6 | import Providers from "@/app/Providers";
+>  7 | import Navbar from "@/components/Navbar";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import Searchbox from '@/components/Searchbox'
+   9 |
+  10 | const geistSans = Geist({
+
+https://nextjs.org/docs/messages/module-not-found
+[01:09:12.803] Browser ERROR   ./app/page.tsx:1:1
+Module not found: Can't resolve '@/components/Result'
+> 1 | import Result from '@/components/Result' 
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+  3 | export const revalidate = 60;
+  4 |
+
+https://nextjs.org/docs/messages/module-not-found
+[01:09:12.803] Browser ERROR   ./app/layout.tsx:8:1
+Module not found: Can't resolve '@/components/Searchbox'
+   6 | import Providers from "@/app/Providers";
+   7 | import Navbar from "@/components/Navbar";
+>  8 | import Searchbox from '@/components/Searchbox'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | const geistSans = Geist({
+  11 |   variable: "--font-geist-sans",
+
+https://nextjs.org/docs/messages/module-not-found
+[01:09:19.712] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:09:19.745] Server  LOG      ✓ Compiled in 803ms
+[01:09:21.059] Server  LOG     Full response: {}
+[01:09:21.066] Server  LOG     Results: [{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...}]
+[01:09:21.080] Server  LOG     Full response: {}
+[01:09:21.175] Server  LOG     Results: [{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...},{...}]
